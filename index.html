@@ -3,30 +3,490 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>منصة ارتقِ | النصوص الأدبية - الفصل الأول</title>
+  <title>منصة ارتقِ | الفصل الدراسي الأول</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
-    :root{--primary:#4338ca;--deep:#312e81;--green:#059669;--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--soft:#f8fafc;--shadow:0 12px 30px #312e8118}
-    *{box-sizing:border-box;margin:0;padding:0} body{font-family:Cairo,system-ui,sans-serif;background:linear-gradient(135deg,#f8fafc,#eef2ff);color:var(--ink);line-height:1.7;min-height:100vh;padding:clamp(12px,3vw,32px)}
-    .wrap{max-width:1200px;margin:auto} header{position:relative;overflow:hidden;text-align:center;color:#fff;background:linear-gradient(135deg,var(--primary),var(--deep));padding:clamp(35px,7vw,70px) 20px;border-radius:24px;box-shadow:var(--shadow);margin-bottom:24px} header:after{content:'✦  ✧  ✦  ✧  ✦';position:absolute;inset:auto 0 8px;color:#ffffff22;font-size:28px;letter-spacing:24px}.brand{font-size:clamp(25px,5vw,44px);font-weight:800}.subtitle{font-size:clamp(17px,3vw,25px);font-weight:600;margin-top:5px}.year{display:inline-block;margin-top:16px;padding:5px 20px;border:1px solid #ffffff44;border-radius:99px;background:#ffffff1c;font-size:14px}
-    .intro,.lesson-card,footer{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.intro{padding:22px;text-align:center;margin-bottom:24px;color:var(--muted);font-size:clamp(15px,2vw,18px)}.note{margin-top:14px;background:#fffbeb;color:#92400e;border-right:4px solid #f59e0b;padding:11px 14px;border-radius:10px;font-size:14px;font-weight:600}
-    .section-title{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--deep);font-size:clamp(22px,4vw,30px);margin:28px 0 18px}.section-title i{color:var(--primary)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}.lesson-card{position:relative;padding:26px 20px 20px;border-top:5px solid var(--primary);transition:.25s}.lesson-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px #312e8128}.num{position:absolute;top:-17px;right:18px;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--deep));color:#fff;font-weight:800;border:3px solid #fff}.lesson-title{font-size:clamp(18px,2.5vw,22px);margin-bottom:15px;padding-right:4px}.description{color:var(--muted);font-size:14px;min-height:48px;margin-bottom:17px}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{flex:1 1 145px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 12px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;transition:.2s}.btn:hover{transform:translateY(-2px)}.lesson{background:linear-gradient(135deg,var(--primary),#6366f1);color:#fff}.game{background:#fff;color:var(--green);border:1px solid #a7f3d0}.game.disabled{color:#9ca3af;background:#f9fafb;border-color:var(--line);cursor:not-allowed}.status{margin-top:15px;color:var(--green);font-size:12px;font-weight:600}.status i{margin-left:5px}footer{text-align:center;margin-top:28px;padding:25px 15px}.teacher{color:var(--primary);font-size:20px;font-weight:800}.school{color:var(--muted);font-size:14px;margin-top:3px}.credit{color:#9ca3af;font-size:12px;margin-top:12px}@media(max-width:520px){.actions{flex-direction:column}.btn{width:100%}.lesson-card{padding:25px 16px 17px}}
+    :root {
+      --primary: #4338ca;
+      --deep: #312e81;
+      --green: #059669;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --soft: #f8fafc;
+      --shadow: 0 12px 30px #312e8118;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Cairo', system-ui, sans-serif;
+      background: linear-gradient(135deg, #f8fafc, #eef2ff);
+      color: var(--ink);
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: clamp(12px, 3vw, 32px);
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* ===== الهيدر ===== */
+    header {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--deep));
+      padding: clamp(35px, 7vw, 70px) 20px;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    header::after {
+      content: '✦  ✧  ✦  ✧  ✦';
+      position: absolute;
+      inset: auto 0 8px;
+      color: #ffffff22;
+      font-size: 28px;
+      letter-spacing: 24px;
+    }
+
+    .brand {
+      font-size: clamp(25px, 5vw, 44px);
+      font-weight: 800;
+    }
+
+    .subtitle {
+      font-size: clamp(17px, 3vw, 25px);
+      font-weight: 600;
+      margin-top: 5px;
+    }
+
+    .year {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 5px 20px;
+      border: 1px solid #ffffff44;
+      border-radius: 99px;
+      background: #ffffff1c;
+      font-size: 14px;
+    }
+
+    /* ===== المقدمة ===== */
+    .intro {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+      text-align: center;
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: clamp(15px, 2vw, 18px);
+    }
+
+    .note {
+      margin-top: 14px;
+      background: #fffbeb;
+      color: #92400e;
+      border-right: 4px solid #f59e0b;
+      padding: 11px 14px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* ===== عناوين الأقسام ===== */
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--deep);
+      font-size: clamp(22px, 4vw, 30px);
+      margin: 28px 0 18px;
+    }
+
+    .section-title i {
+      color: var(--primary);
+    }
+
+    /* ===== شبكة البطاقات ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: 20px;
+    }
+
+    /* ===== بطاقة الدرس ===== */
+    .lesson-card {
+      position: relative;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 26px 20px 20px;
+      border-top: 5px solid var(--primary);
+      transition: 0.25s;
+    }
+
+    .lesson-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 38px #312e8128;
+    }
+
+    /* ألوان خاصة بكل قسم */
+    .literary .lesson-card { border-top-color: var(--primary); }
+    .grammar .lesson-card { border-top-color: #3b82f6; }
+    .reading1 .lesson-card { border-top-color: var(--green); }
+
+    /* ===== رقم الدرس ===== */
+    .num {
+      position: absolute;
+      top: -17px;
+      right: 18px;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--deep));
+      color: #fff;
+      font-weight: 800;
+      border: 3px solid #fff;
+    }
+
+    .literary .num { background: linear-gradient(135deg, var(--primary), var(--deep)); }
+    .grammar .num { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .reading1 .num { background: linear-gradient(135deg, var(--green), #047857); }
+
+    /* ===== عنوان الدرس ===== */
+    .lesson-title {
+      font-size: clamp(18px, 2.5vw, 22px);
+      margin-bottom: 15px;
+      padding-right: 4px;
+    }
+
+    .description {
+      color: var(--muted);
+      font-size: 14px;
+      min-height: 48px;
+      margin-bottom: 17px;
+    }
+
+    /* ===== الأزرار ===== */
+    .actions {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      flex: 1 1 145px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-lesson {
+      background: linear-gradient(135deg, var(--primary), #6366f1);
+      color: #fff;
+    }
+
+    .grammar .btn-lesson { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+    .reading1 .btn-lesson { background: linear-gradient(135deg, var(--green), #047857); }
+
+    .btn-game {
+      background: #fff;
+      color: var(--green);
+      border: 1px solid #a7f3d0;
+    }
+
+    .btn-game.disabled {
+      color: #9ca3af;
+      background: #f9fafb;
+      border-color: var(--line);
+      cursor: not-allowed;
+    }
+
+    /* ===== الحالة ===== */
+    .status {
+      margin-top: 15px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .status i {
+      margin-left: 5px;
+    }
+
+    /* ===== الفوتر ===== */
+    footer {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      margin-top: 28px;
+      padding: 25px 15px;
+    }
+
+    .teacher {
+      color: var(--primary);
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .school {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 3px;
+    }
+
+    .credit {
+      color: #9ca3af;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    /* ===== استجابة للشاشات الصغيرة ===== */
+    @media (max-width: 520px) {
+      .actions {
+        flex-direction: column;
+      }
+      .btn {
+        width: 100%;
+      }
+      .lesson-card {
+        padding: 25px 16px 17px;
+      }
+    }
   </style>
 </head>
 <body>
+
   <main class="wrap">
-    <header><div class="brand"><i class="fa-solid fa-book-open" aria-hidden="true"></i> منصة ارتقِ</div><div class="subtitle">النصوص الأدبية | الصف الخامس</div><div class="year">الفصل الدراسي الأول · 2026/2027</div></header>
-    <section class="intro"><p>مرحبًا بكم في بوابة الشرح والتدريبات التفاعلية لمادة اللغة العربية.</p><p>اختر النص الأدبي الذي تريد دراسته، واستعد لاكتشاف جمال لغتنا العربية.</p><div class="note"><i class="fa-solid fa-gamepad"></i> ستُضاف الألعاب التفاعلية تباعًا. يمكن إدراج رابط اللعبة في الزر المخصص لكل درس.</div></section>
-    <h2 class="section-title"><i class="fa-solid fa-feather-pointed"></i> دروس النصوص الأدبية</h2>
-    <section class="grid" aria-label="دروس النصوص الأدبية">
-      <article class="lesson-card"><span class="num">1</span><h3 class="lesson-title">سليمان والحمامة</h3><p class="description">شرح النص والتدريبات والأسئلة التطبيقية.</p><div class="actions"><a class="btn lesson" href="https://omk811.github.io/so1/" target="_blank" rel="noopener"><i class="fa-solid fa-chalkboard-user"></i> الشرح والتدريبات</a><a class="btn game disabled" href="#" aria-disabled="true" title="سيُضاف الرابط لاحقًا"><i class="fa-solid fa-gamepad"></i> الألعاب قريبًا</a></div><div class="status"><i class="fa-solid fa-circle-check"></i> الشرح متاح الآن</div></article>
-      <article class="lesson-card"><span class="num">2</span><h3 class="lesson-title">عمان في سجل الدهر</h3><p class="description">قصيدة وطنية تعرّف بمكانة عُمان وتاريخها المجيد.</p><div class="actions"><a class="btn lesson" href="https://omk811.github.io/Oman-in-history/" target="_blank" rel="noopener"><i class="fa-solid fa-chalkboard-user"></i> الشرح والتدريبات</a><a class="btn game disabled" href="#" aria-disabled="true" title="سيُضاف الرابط لاحقًا"><i class="fa-solid fa-gamepad"></i> الألعاب قريبًا</a></div><div class="status"><i class="fa-solid fa-circle-check"></i> الشرح متاح الآن</div></article>
-      <article class="lesson-card"><span class="num">3</span><h3 class="lesson-title">سر الوجود</h3><p class="description">شرح النص والتدريبات والأسئلة بطريقة مناسبة لطلبة الصف الخامس.</p><div class="actions"><a class="btn lesson" href="https://omk811.github.io/sw/" target="_blank" rel="noopener"><i class="fa-solid fa-chalkboard-user"></i> الشرح والتدريبات</a><a class="btn game disabled" href="#" aria-disabled="true" title="سيُضاف الرابط لاحقًا"><i class="fa-solid fa-gamepad"></i> الألعاب قريبًا</a></div><div class="status"><i class="fa-solid fa-circle-check"></i> الشرح متاح الآن</div></article>
+
+    <!-- ===== الهيدر ===== -->
+    <header>
+      <div class="brand">
+        <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+        منصة ارتقِ
+      </div>
+      <div class="subtitle">اللغة العربية | الصف الخامس</div>
+      <div class="year">الفصل الدراسي الأول · 2025/2026</div>
+    </header>
+
+    <!-- ===== المقدمة ===== -->
+    <section class="intro">
+      <p>مرحبًا بكم في بوابة الشرح والتدريبات التفاعلية لمادة اللغة العربية.</p>
+      <p>اختر الدرس الذي تريد دراسته، واستعد لاكتشاف جمال لغتنا العربية.</p>
+      <div class="note">
+        <i class="fa-solid fa-gamepad"></i>
+        الألعاب التفاعلية سيتم إضافتها تباعاً. يمكن إدراج رابط اللعبة في الزر المخصص لكل درس.
+      </div>
     </section>
-    <footer><div class="teacher">إعداد: الأستاذ خليل البلوشي</div><div class="school">مدرسة سعد بن معاذ للتعليم الأساسي</div><div class="credit">منصة تعليمية لخدمة طلبة الصف الخامس</div></footer>
+
+    <!-- ============================================================ -->
+    <!-- 1. النصوص الأدبية                                              -->
+    <!-- ============================================================ -->
+    <h2 class="section-title">
+      <i class="fa-solid fa-feather-pointed"></i>
+      النصوص الأدبية
+    </h2>
+    <section class="grid literary" aria-label="دروس النصوص الأدبية">
+
+      <article class="lesson-card">
+        <span class="num">1</span>
+        <h3 class="lesson-title">سليمان والحمامة</h3>
+        <p class="description">شرح النص والتدريبات والأسئلة التطبيقية.</p>
+        <div class="actions">
+          <a class="btn btn-lesson" href="https://omk811.github.io/so1/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-chalkboard-user"></i> الشرح والتدريبات
+          </a>
+          <a class="btn btn-game disabled" href="#" aria-disabled="true" title="سيُضاف الرابط لاحقًا">
+            <i class="fa-solid fa-gamepad"></i> الألعاب قريبًا
+          </a>
+        </div>
+        <div class="status">
+          <i class="fa-solid fa-circle-check"></i> الشرح متاح الآن
+        </div>
+      </article>
+
+      <article class="lesson-card">
+        <span class="num">2</span>
+        <h3 class="lesson-title">عمان في سجل الدهر</h3>
+        <p class="description">قصيدة وطنية تعرّف بمكانة عُمان وتاريخها المجيد.</p>
+        <div class="actions">
+          <a class="btn btn-lesson" href="https://omk811.github.io/Oman-in-history/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-chalkboard-user"></i> الشرح والتدريبات
+          </a>
+          <a class="btn btn-game disabled" href="#" aria-disabled="true" title="سيُضاف الرابط لاحقًا">
+            <i class="fa-solid fa-gamepad"></i> الألعاب قريبًا
+          </a>
+        </div>
+        <div class="status">
+          <i class="fa-solid fa-circle-check"></i> الشرح متاح الآن
+        </div>
+      </article>
+
+      <article class="lesson-card">
+        <span class="num">3</span>
+        <h3 class="lesson-title">سر الوجود</h3>
+        <p class="description">شرح النص والتدريبات والأسئلة بطريقة مناسبة لطلبة الصف الخامس.</p>
+        <div class="actions">
+          <a class="btn btn-lesson" href="https://omk811.github.io/sw/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-chalkboard-user"></i> الشرح والتدريبات
+          </a>
+          <a class="btn btn-game disabled" href="#" aria-disabled="true" title="سيُضاف الرابط لاحقًا">
+            <i class="fa-solid fa-gamepad"></i> الألعاب قريبًا
+          </a>
+        </div>
+        <div class="status">
+          <i class="fa-solid fa-circle-check"></i> الشرح متاح الآن
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 2. النحو والصرف والإملاء                                               -->
+    <!-- ============================================================ -->
+    <h2 class="section-title">
+      <i class="fa-solid fa-pen-nib"></i>
+      النحو والصرف والإملاء
+    </h2>
+    <section class="grid grammar" aria-label="دروس النحو والصرف والإملاء">
+
+      <article class="lesson-card">
+        <span class="num">1</span>
+        <h3 class="lesson-title">الإعراب والبناء</h3>
+        <p class="description">الكلمات نوعان: معربة (تتغير حركة آخرها) ومبنية (لا تتغير حركة آخرها).</p>
+        <div class="actions">
+          <a class="btn btn-lesson" href="https://omk811.github.io/i3rab/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-chalkboard-user"></i> الشرح والتدريبات
+          </a>
+          <a class="btn btn-game disabled" href="#" aria-disabled="true" title="سيُضاف الرابط لاحقًا">
+            <i class="fa-solid fa-gamepad"></i> الألعاب قريبًا
+          </a>
+        </div>
+        <div class="status">
+          <i class="fa-solid fa-circle-check"></i> الشرح متاح الآن
+        </div>
+      </article>
+
+      <article class="lesson-card">
+        <span class="num">2</span>
+        <h3 class="lesson-title">همزة الوصل وهمزة القطع</h3>
+        <p class="description">همزة القطع تُنطق وتُكتب دائماً، أما همزة الوصل فتُنطق في أول الكلام وتُسقط في الوصل.</p>
+        <div class="actions">
+          <a class="btn btn-lesson" href="https://omk811.github.io/hamza/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-chalkboard-user"></i> الشرح والتدريبات
+          </a>
+          <a class="btn btn-game disabled" href="#" aria-disabled="true" title="سيُضاف الرابط لاحقًا">
+            <i class="fa-solid fa-gamepad"></i> الألعاب قريبًا
+          </a>
+        </div>
+        <div class="status">
+          <i class="fa-solid fa-circle-check"></i> الشرح متاح الآن
+        </div>
+      </article>
+
+      <article class="lesson-card">
+        <span class="num">3</span>
+        <h3 class="lesson-title">الجملة الاسمية</h3>
+        <p class="description">الجملة الاسمية تبدأ باسم، وتتكون من مبتدأ مرفوع وخبر مرفوع يُتمم المعنى.</p>
+        <div class="actions">
+          <a class="btn btn-lesson" href="https://omk811.github.io/nominal/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-chalkboard-user"></i> الشرح والتدريبات
+          </a>
+          <a class="btn btn-game disabled" href="#" aria-disabled="true" title="سيُضاف الرابط لاحقًا">
+            <i class="fa-solid fa-gamepad"></i> الألعاب قريبًا
+          </a>
+        </div>
+        <div class="status">
+          <i class="fa-solid fa-circle-check"></i> الشرح متاح الآن
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 3. القراءة – المحور الأول                                     -->
+    <!-- ============================================================ -->
+    <h2 class="section-title">
+      <i class="fa-solid fa-glasses"></i>
+      القراءة – المحور الأول
+    </h2>
+    <section class="grid reading1" aria-label="دروس القراءة المحور الأول">
+
+      <article class="lesson-card">
+        <span class="num">1</span>
+        <h3 class="lesson-title">اليوم الأول في المدرسة</h3>
+        <p class="description">استقبال العام الدراسي الجديد بمشاعر الحنين والفرح، واكتساب أصدقاء، والاستعداد لبناء المستقبل.</p>
+        <div class="actions">
+          <a class="btn btn-lesson" href="https://omk811.github.io/firstday/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-chalkboard-user"></i> الشرح والتدريبات
+          </a>
+          <a class="btn btn-game disabled" href="#" aria-disabled="true" title="سيُضاف الرابط لاحقًا">
+            <i class="fa-solid fa-gamepad"></i> الألعاب قريبًا
+          </a>
+        </div>
+        <div class="status">
+          <i class="fa-solid fa-circle-check"></i> الشرح متاح الآن
+        </div>
+      </article>
+
+      <article class="lesson-card">
+        <span class="num">2</span>
+        <h3 class="lesson-title">في أيام الشدة</h3>
+        <p class="description">التضامن والتعاون والعطاء في الأزمات، وقدوة الأم في مساعدة الجيران.</p>
+        <div class="actions">
+          <a class="btn btn-lesson" href="https://omk811.github.io/harddays/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-chalkboard-user"></i> الشرح والتدريبات
+          </a>
+          <a class="btn btn-game disabled" href="#" aria-disabled="true" title="سيُضاف الرابط لاحقًا">
+            <i class="fa-solid fa-gamepad"></i> الألعاب قريبًا
+          </a>
+        </div>
+        <div class="status">
+          <i class="fa-solid fa-circle-check"></i> الشرح متاح الآن
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ===== الفوتر ===== -->
+    <footer>
+      <div class="teacher">إعداد: الأستاذ خليل البلوشي</div>
+      <div class="school">مدرسة سعد بن معاذ للتعليم الأساسي</div>
+      <div class="credit">منصة تعليمية لخدمة طلبة الصف الخامس – الفصل الدراسي الأول</div>
+    </footer>
+
   </main>
+
 </body>
 </html>
