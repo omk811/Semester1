@@ -149,7 +149,7 @@
     /* ألوان خاصة بكل قسم */
     .literary .lesson-card { border-top-color: var(--primary); }
     .grammar .lesson-card { border-top-color: #3b82f6; }
-    .reading1 .lesson-card { border-top-color: var(--green); }
+    .reading1 .lesson-card, .reading2 .lesson-card { border-top-color: var(--green); }
 
     /* ===== رقم الدرس ===== */
     .num {
@@ -169,7 +169,7 @@
 
     .literary .num { background: linear-gradient(135deg, var(--primary), var(--deep)); }
     .grammar .num { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
-    .reading1 .num { background: linear-gradient(135deg, var(--green), #047857); }
+    .reading1 .num, .reading2 .num { background: linear-gradient(135deg, var(--green), #047857); }
 
     /* ===== عنوان الدرس ===== */
     .lesson-title {
@@ -216,7 +216,7 @@
     }
 
     .grammar .btn-lesson { background: linear-gradient(135deg, #3b82f6, #2563eb); }
-    .reading1 .btn-lesson { background: linear-gradient(135deg, var(--green), #047857); }
+    .reading1 .btn-lesson, .reading2 .btn-lesson { background: linear-gradient(135deg, var(--green), #047857); }
 
     .btn-game {
       background: #fff;
@@ -279,6 +279,10 @@
       }
       .btn {
         width: 100%;
+      }
+      .reading2 .btn {
+        flex: 0 0 auto;
+        min-height: 46px;
       }
       .lesson-card {
         padding: 25px 16px 17px;
@@ -479,6 +483,42 @@
 
     </section>
 
+
+    <!-- ============================================================ -->
+    <!-- القراءة – المحور الثاني                                        -->
+    <!-- ============================================================ -->
+    <h2 class="section-title" id="axis2-reading">
+      <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i>
+      القراءة – المحور الثاني
+    </h2>
+    <section class="grid reading2" aria-labelledby="axis2-reading">
+      <article class="lesson-card">
+        <span class="num">1</span>
+        <h3 class="lesson-title">شخصية السلطان قابوس – طيّب الله ثراه</h3>
+        <p class="description">النص الكامل، وأفكار الفقرات ومعجمها وأسئلة فهمها، مع أنشطة الكتاب واختبار تفاعلي في السيرة الغيرية.</p>
+        <div class="actions">
+          <a class="btn btn-lesson" href="https://nashati.omk811.chatgpt.site/qaboos.html" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i> الشرح والتدريبات والاختبار
+          </a>
+        </div>
+        <div class="status">
+          <i class="fa-solid fa-circle-check" aria-hidden="true"></i> الدرس التفاعلي متاح الآن
+        </div>
+      </article>
+      <article class="lesson-card">
+        <span class="num">2</span>
+        <h3 class="lesson-title">نشأتي</h3>
+        <p class="description">النص الكامل، وأفكار الفقرات ومعجمها وأسئلة فهمها، مع أنشطة الكتاب واختبار تفاعلي في السيرة الذاتية.</p>
+        <div class="actions">
+          <a class="btn btn-lesson" href="https://nashati.omk811.chatgpt.site/nashati.html" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i> الشرح والتدريبات والاختبار
+          </a>
+        </div>
+        <div class="status">
+          <i class="fa-solid fa-circle-check" aria-hidden="true"></i> الدرس التفاعلي متاح الآن
+        </div>
+      </article>
+    </section>
 
     <h2 class="section-title" id="axis2-grammar">
       <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
